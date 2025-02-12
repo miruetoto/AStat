@@ -1,2 +1,2 @@
 # AStat
-Asymptotic Statistics, A.W. van der Vaart 
+Study: Asymptotic Statistics, A.W. van der Vaart 
