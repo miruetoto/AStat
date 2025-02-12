@@ -1,0 +1,131 @@
+/* Google Fonts 불러오기 (한글 + 영문) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+
+/* 글씨체 CSS 변수 설정 */
+:root {
+    --primary-font: 'Consolas';
+    --heading-font: 'Consolas';
+    --accent-font: 'Consolas';
+    --korean-font: 'Consolas';
+}
+
+/* 기본 스타일 */
+body {
+    font-family: var(--primary-font);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcf7;
+    color: #555;
+}
+
+/* 제목 스타일 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: #ff6f61;
+    margin-bottom: 0.7em;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+/* 리스트 스타일 */
+ol, ul {
+    font-size: 1.0rem; /* 리스트 글씨 크기 증가 */
+    line-height: 1.8;
+    margin-left: 0.5em; /* 좌측 여백 */
+}
+
+ol li, ul li {
+    font-size: 1.0rem; /* 리스트 항목 글씨 크기 증가 */
+    margin-bottom: 0.5em; /* 항목 간 간격 추가 */
+}
+
+/* 일반 텍스트 스타일 */
+p {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.8;
+    font-family: var(--primary-font);
+}
+
+/* 링크 스타일 */
+a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ff6f61;
+    font-family: var(--accent-font);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d64b40;
+}
+
+/* 카드 스타일 */
+.card {
+    background-color: #fff;
+    border: 1px solid #ffe4e1;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 반응형 스타일: 태블릿 (cursive 제거) */
+@media (max-width: 1024px) {
+    :root {
+        --primary-font: 'Consolas', monospace;   /* 안정적인 폰트로 변경 */
+        --heading-font: 'Consolas', monospace;
+        --accent-font: 'Consolas', monospace;
+        --korean-font: 'Noto Serif KR', serif;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 반응형 스타일: 모바일 (cursive 제거) */
+@media (max-width: 768px) {
+    :root {
+        --primary-font: 'Consolas', monospace;   /* 모바일에서도 cursive 제거 */
+        --heading-font: 'Consolas', monospace;
+        --accent-font: 'Consolas', monospace;
+        --korean-font: 'Noto Serif KR', serif;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* 반응형 스타일: 모바일 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
